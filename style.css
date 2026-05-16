@@ -1,0 +1,98 @@
+:root {
+    --blue1: #dbeafe;
+    --blue2: #bedbff;
+    --blue4: #54a2ff;
+    --blue5: #3080ff;
+    --gray1: #212121;
+    --gray2: #e5e7eb;
+    --gray3: #d1d5dc;
+    --gray4: #99a1af;
+    --gray5: #6a7282;
+    --gray6: #4a5565;
+}
+
+
+* {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+.section {
+    border-bottom: 2px solid var(--gray6);
+}
+
+
+.container {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+
+
+.container h1 {
+    margin-top: 150px;
+    background-image: linear-gradient(to top, var(--blue5), var(--blue1));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 50px var(--blue4);
+}
+
+
+.container p {
+    margin-top: 20px;
+    color: var(--gray4);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    /*padding-bottom: 200px;*/
+}
+
+
+.container a {
+    margin-top: 75px;
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    padding: 3px 0;
+    color: var(--blue4);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    background: black;
+    border: 2px solid var(--blue4);
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 8px var(--blue4)
+}
+
+
+.container a:hover {
+    color: black;
+    background: var(--blue4);
+    border: 0;
+    box-shadow: #0a254059 0px -2px 6px 0px inset;
+    transform: translateY(-2px);
+}
+
+
+.container a:active {
+    color: var(--blue4);
+    background: black;
+    border: 2px solid var(--blue4);
+    box-shadow: 0;
+}

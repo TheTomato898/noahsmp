@@ -1,15 +1,24 @@
 :root {
-    --blue1: #dbeafe;
-    --blue2: #bedbff;
-    --blue4: #54a2ff;
-    --blue5: #3080ff;
-    --blue5l: #3080ff3d;
-    --gray1: #212121;
-    --gray2: #e5e7eb;
-    --gray3: #d1d5dc;
-    --gray4: #99a1af;
-    --gray5: #6a7282;
-    --gray6: #4a5565;
+  /* Colors */
+  --blue1: #dbeafe;
+  --blue2: #bedbff;
+  --blue4: #54a2ff;
+  --blue5: #3080ff;
+  --blue5l: #3080ff3d;
+  --gray1: #212121;
+  --gray2: #e5e7eb;
+  --gray3: #d1d5dc;
+  --gray4: #99a1af;
+  --gray5: #6a7282;
+  --gray6: #4a5565;
+  /* Layout */
+  --xxs: 0.25rem; /*4px*/
+  --xs: 0.5rem; /*8px*/
+  --s: 1rem; /*16px*/
+  --m: 2rem; /*32px*/
+  --l: 4rem; /*64px*/
+  --xl: 8rem; /*128px*/
+  --xxl: 16rem; /*256px*/
 }
 
 
@@ -17,13 +26,12 @@
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
-  margin: 0;
-  padding: 0;
 }
 
 
 body {
   background-color: #000000;
+  margin: 0;
 }
 
 
@@ -37,7 +45,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .container {
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: clamp(14rem, 20vw, 16rem);
   box-sizing: border-box;
 }
 
@@ -53,41 +61,40 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .container h1 {
-  padding-top: 150px;
+  padding-top: clamp(8rem, 15vw, 16rem);
   background-image: linear-gradient(to top, var(--blue5), var(--blue1));
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 800;
   font-style: normal;
-  font-size: 100px;
+  font-size: clamp(4rem, 22vw, 8rem);
   text-shadow: 4px 4px 50px var(--blue4);
 }
 
 
 .container h4 {
   color: var(--blue4);
-  font-size: 30px;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
 
 .container p {
-  margin-top: 20px;
+  margin-top: 0.5rem;
   color: var(--gray4);
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  /*padding-bottom: 200px;*/
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
 }
 
 
 .button {
-  margin-top: 75px;
+  margin-top: 4rem;
   display: inline-block;
   position: relative;
   width: 350px;
-  padding: 3px 0;
+  padding: 0.25rem 0;
   color: var(--blue4);
-  font-size: 30px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
@@ -117,9 +124,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 
-.section2 h2 {
+.container h2 {
   color: var(--blue4);
-  font-size: 50px;
+  font-size: clamp(3.5rem, 6vw, 4rem);
   font-weight: 500;
   text-shadow: 4px 4px 30px var(--blue4);
   background-color: var(--blue4);
@@ -130,7 +137,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(3rem);
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
@@ -141,32 +148,33 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   transform: translateY(0);
 }
 
-
-.section3 h2 {
-  color: var(--blue4);
-  font-size: 50px;
-  font-weight: 500;
-  text-shadow: 4px 4px 30px var(--blue4);
-  background-color: var(--blue4);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .section3 .description {
-  margin-bottom: 75px;
+  margin-bottom: 4.5rem;
 }
+
+.list {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  h4 {
+    margin: 0;
+    padding: 0.75rem 0;
+  }
+}
+
 
 .section3 .list {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 30px;
+  gap: 2rem;
   justify-content: start;
 }
 
 .list > div {
   border: 1px solid var(--blue4);
   border-radius: 24px;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
   box-shadow: 3px 3px 9px var(--blue4);
 }
 
@@ -201,8 +209,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .section2::before, .section3::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 32rem;
+  height: 32rem;
   background: radial-gradient(circle, rgba(84,162,255,0.18), transparent 70%
   );
   filter: blur(80px);
@@ -219,5 +227,5 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .section3::before {
   left: 70%;
-  top: -100px
+  top: -100px;
 }

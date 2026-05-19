@@ -54,7 +54,7 @@ h1 {
   color: transparent;
   font-weight: 800;
   font-style: normal;
-  font-size: 100px;
+  font-size: 85px;
   text-shadow: 4px 4px 50px var(--blue4);
 }
 
@@ -82,7 +82,7 @@ p {
   width: 350px;
   padding: 3px 0;
   color: var(--blue4);
-  font-size: 30px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
@@ -118,7 +118,7 @@ p {
 
 h2 {
   color: var(--blue4);
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 500;
   text-shadow: 4px 4px 30px var(--blue4);
   background-color: var(--blue4);
@@ -147,14 +147,14 @@ h2 {
 .section3 .list {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  gap: 30px;
+  gap: 20px;
   justify-content: start;
 }
 
 .list > div {
   border: 1px solid var(--blue4);
   border-radius: 24px;
-  padding: 20px 40px;
+  padding: 15px 30px;
   box-shadow: 3px 3px 9px var(--blue4);
 }
 
@@ -185,6 +185,12 @@ svg {
 
 
 @media (min-width: 768px) {
+  .list > div {
+    padding: 20px 40px;
+  }
+  .section3 .list {
+    gap: 30px;
+  }
   h1 {
     font-size: 110px;
   }

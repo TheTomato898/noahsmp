@@ -376,13 +376,13 @@ svg {
 
 
 
-.section2, .section3 {
+.section2, .section3, .section4 {
   position: relative;
 }
 
 /* Glow */
 
-.section2::before, .section3::before {
+.section2::before, .section3::before, .section4::before {
   content: "";
   position: absolute;
   width: 500px;
@@ -404,4 +404,9 @@ svg {
 .section3::before {
   left: 60%;
   top: 300px
+}
+
+.section4::before {
+  left: 30%;
+  top: 600px
 }

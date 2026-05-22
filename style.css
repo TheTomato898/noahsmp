@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 
@@ -31,6 +32,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-repeat: no-repeat;
   background-position: center top;
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 
@@ -51,14 +53,29 @@ ul {
 }
 
 ul li a {
-  font-size: 20px;
+  font-size: 28px;
   display: block;
   text-decoration: none;
   color: var(--blue4);
   text-align: center;
-  padding: 12px 16px;
+  padding: 3px 10px;
   z-index: 2;
   transition: transform 0.1s ease;
+}
+ul li svg {
+  width: 28px;
+  height: 28px;
+}
+.nav-right {
+  margin-left: auto;
+}
+.nav-middle {
+  margin: 0 auto;
+  white-space: nowrap;
+}
+.nav-right div {
+  display: inline-flex;
+  align-items: center;
 }
 
 ul li a:hover {
@@ -68,7 +85,8 @@ ul li a:hover {
 .status {
   color: var(--gray4);
   font-size: 20px;
-  padding: 12px 16px;
+  font-weight: 100;
+  padding: 8px 10px;
   z-index: 2;
   display: block;
 }
@@ -184,7 +202,7 @@ h2 {
   transform: translateY(0);
 }
 
-.section3 .description {
+.description {
   margin-bottom: 75px;
 }
 
@@ -193,6 +211,14 @@ h2 {
   grid-template-columns: repeat(2, max-content);
   gap: 20px;
   justify-content: start;
+}
+
+.section4 .list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: start;
+  width: 100%;
 }
 
 .list > div {
@@ -226,18 +252,31 @@ svg {
 }
 
 
-.tablet, .desktop {
+.tablet, .desktop, .tiny {
   display: none;
 }
 .mobile {
   display: block;
 }
 
+@media (max-width: 475px) {
+  .tiny {
+    display: block;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  .button {
+    width: 315px;
+  }
+}
+
+
 @media (min-width: 768px) {
   .list > div {
     padding: 20px 40px;
   }
-  .section3 .list {
+  .list {
     gap: 30px;
   }
   h1 {
@@ -261,8 +300,17 @@ svg {
     width: 33px;
     height: 33px;
   }
-  ul li a, .status {
-    font-size: 22px;
+  ul li a {
+    font-size: 33px;
+    padding: 4px 12px;
+  }
+  ul li svg {
+  width: 33px;
+  height: 33px;
+  }
+  .status {
+    font-size: 25px;
+    padding: 10px 12px;
   }
   .mobile, .desktop {
     display: none;
@@ -273,7 +321,10 @@ svg {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1225px) {
+  html {
+    scroll-padding-top: 100px;
+  }
   .section3 .list {
       grid-template-columns: repeat(3, max-content);
   }
@@ -302,8 +353,17 @@ svg {
   ul {
     border-radius: 36px;
   }
-  ul li a, .status {
-    font-size: 30px;
+  ul li a {
+    font-size: 45px;
+    padding: 8px 15px;
+  }
+  ul li svg {
+  width: 45px;
+  height: 45px;
+  }
+  .status {
+    font-size: 37px;
+    padding: 13px 12px;
   }
   .mobile, .tablet {
     display: none;

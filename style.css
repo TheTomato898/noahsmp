@@ -318,6 +318,9 @@ svg {
   .tablet {
     display: block;
   }
+  ul {
+    top: 6px;
+  }
 }
 
 
@@ -352,6 +355,7 @@ svg {
   }
   ul {
     border-radius: 36px;
+    top: 7px;
   }
   ul li a {
     font-size: 45px;

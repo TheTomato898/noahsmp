@@ -24,6 +24,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 
@@ -49,7 +50,7 @@ ul {
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 ul li a {
@@ -63,6 +64,7 @@ ul li a {
   transition: transform 0.1s ease;
 }
 ul li svg {
+  padding: 3px 10px 3px 0px;
   width: 28px;
   height: 28px;
 }
@@ -305,8 +307,9 @@ svg {
     padding: 4px 12px;
   }
   ul li svg {
-  width: 33px;
-  height: 33px;
+    width: 33px;
+    height: 33px;
+    padding: 4px 12px 4px 0px;  
   }
   .status {
     font-size: 25px;
@@ -362,8 +365,9 @@ svg {
     padding: 8px 15px;
   }
   ul li svg {
-  width: 45px;
-  height: 45px;
+    width: 45px;
+    height: 45px;
+    padding: 8px 15px 8px 0px;
   }
   .status {
     font-size: 37px;
